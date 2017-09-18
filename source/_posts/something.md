@@ -3,6 +3,15 @@ title: something
 date: 2017-09-18 10:35:55
 tags:
 ---
+<style>
+  .boxbox{
+    border: 2px dashed #ddd;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="boxbox">
 DOM文档加载的步骤为：
 1. 解析HTML结构。
 2. 加载外部脚本和样式表文件。
@@ -19,3 +28,17 @@ window.addEventListener("load", function() {
   // something...
 }, false);
 ```
+</div>
+
+<div class="boxbox">
+innerHTML: 从对象的起始位置到终止位置的全部内容,不包括Html标签。
+outerHTML: 除了包含innerHTML的全部内容外, 还包含对象标签本身。
+demo: 
+``` javascript
+<div id="test"> 
+   <span style="color:red">test1</span> test2 
+</div>
+// innerHTML: "<span style="color:red">test1</span> test2 "
+// outerHTML: "<div id="test"><span style="color:red">test1</span> test2 </div>"
+```
+</div>

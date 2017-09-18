@@ -1,6 +1,4 @@
 .DS_Store
 node_modules
 *.map
-./db.json
-./yarn.lock
-./public
+public

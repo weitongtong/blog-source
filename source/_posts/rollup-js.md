@@ -134,7 +134,7 @@ Rollup 对代码模块完全使用新的标准化格式，这些标准都包含�
 
     导出来的bundle.js仍然能够在Node.js下运行，因为import声明被转化成CommonJS风格的require语句，但是the-answer没有放到bundle中，因此我们需要一个插件。
 
-    rollup-plugin-node-resolve 插件
+    **rollup-plugin-node-resolve 插件**
 
     ```bash
       npm install --save-dev rollup-plugin-node-resolve
@@ -153,7 +153,7 @@ Rollup 对代码模块完全使用新的标准化格式，这些标准都包含�
       }
     ```
 
-    rollup-plugin-commonjs插件
+    **rollup-plugin-commonjs插件**
 
     有些库导出的是es6模块，所以你可import——the-answer就是这种。然而npm的大多数第三方库是CommonJS风格的模块。在其发生改变之前，我们需要转换CommonJS为ES2015的模块，然后再用rollup处理。
     这正是rollup-plugin-commonjs的功能所在。
@@ -244,6 +244,28 @@ export default {
     console.log('the answer is ' + index);
   });
   ```
+
+## 四、Big list of options
+
+  1. globals -g / --globals
+  use for umd / iife bundles. For example, in a case like this...
+  ``` javascript
+  import Vue from 'vue'
+  ```
+  ...we want to tell Rollup that the vue module ID equates to the global Vue variable:
+  ``` javascript
+  // rollup.config.js
+  export default {
+    ...,
+    format: 'iife',
+    moduleName: 'myBundle',
+    globals: {
+      vue: 'Vue', // vue 模块在 全局中对应的变量名称是'Vue'
+    }
+  }
+  ```
+
+
 
   [官网](https://rollupjs.org/)
   [中文文档](https://segmentfault.com/a/1190000009910959#articleHeader7)
