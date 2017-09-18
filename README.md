@@ -6,13 +6,13 @@
 $ hexo s
 ```
 
-### Generate Static files
+### Generate Static Files
 
 ``` bash
 $ hexo g
 ```
 
-### Deploy to remote sites
+### Deploy To Remote Sites
 
 ``` bash
 $ hexo d
