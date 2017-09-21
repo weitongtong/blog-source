@@ -42,3 +42,7 @@ demo:
 // outerHTML: "<div id="test"><span style="color:red">test1</span> test2 </div>"
 ```
 </div>
+
+<div class="boxbox">
+  [学习资料](http://caibaojian.com/book/)
+</div>
