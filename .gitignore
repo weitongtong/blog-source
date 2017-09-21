@@ -3,3 +3,5 @@ node_modules
 *.map
 public
 .deploy_git
+db.json
+_config.yml
