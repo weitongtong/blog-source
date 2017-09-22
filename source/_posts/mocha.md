@@ -1,10 +1,12 @@
 ---
-title: mocha(unit testing)
+title: Mocha(unit testing)
 date: 2017-09-22 11:18:48
 tags:
 ---
 [mocha-demo](https://github.com/weitongtong/test-demo/tree/master/mocha-demo)
 [mochajs.org](https://mochajs.org)
+
+unit testing: 单元测试
 
 (1) 安装 Mocha 和 Chai
 ``` bash
@@ -54,6 +56,10 @@ describe('测试add方法', () => {
   }
 }
 ```
+``` bash
+$ npm run test
+```
+![image](http://oifogbmox.bkt.clouddn.com/170922-1.png)
 
 测试脚本与所要测试的源码脚本同名，但是后缀名为`.test.js`（表示测试）或者`.spec.js`（表示规格）。比如，`add.js`的测试脚本名字就是`add.test.js`。
 
