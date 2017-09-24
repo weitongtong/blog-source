@@ -5,6 +5,13 @@
   "hexo": {
     "version": "3.3.9"
   },
+  "scripts": {
+    "gitbook-node-note": "gitbook build './gitbooks/gitbook-node-note' './public/gitbook-node-note'",
+    "hs": "hexo s -p 4001",
+    "bs": "gitbook serve './gitbooks/gitbook-node-note' --port 4002",
+    "g": "hexo clean && hexo g && npm run gitbook-node-note",
+    "d": "hexo d"
+  },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-admin": "^2.2.1",
@@ -17,5 +24,8 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "hexo": "^3.3.9"
   }
 }

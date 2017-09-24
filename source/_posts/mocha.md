@@ -79,6 +79,6 @@ expect(add(1, 1)).to.be.equal(2)
 ``` javascript
 const expect = require('chai').expect
 ```
-断言库有很多种，Mocha并不限制使用哪一种。上面代码引入的断言库是chai，并且指定使用它的expect断言风格。
+断言库有很多种，`Mocha`并不限制使用哪一种。上面代码引入的断言库是`chai`，并且指定使用它的`expect`断言风格。
 
 暂时这么多，后续补充。。。
