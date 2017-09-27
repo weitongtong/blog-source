@@ -44,5 +44,17 @@ demo:
 </div>
 
 <div class="boxbox">
+判断是否为{}空对象
+``` js
+function isEmptyObj(obj) {
+  if (obj === undefined || obj === null) {
+    return false
+  }
+  return Object.getOwnPropertyNames(obj).length === 0
+}
+```
+</div>
+
+<div class="boxbox">
   [学习资料](http://caibaojian.com/book/)
 </div>
