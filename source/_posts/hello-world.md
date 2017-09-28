@@ -36,3 +36,7 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
+
+---
+
+[hexo 图标地址](http://fontawesome.io/)
