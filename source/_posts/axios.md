@@ -58,6 +58,18 @@ axios.all([getDataA(), getDataB()]).then((res) => {
 })
 ```
 
+返回数据：
+
+``` js
+axios.get('url').then((res) => {
+  res.data // 数据
+  res.status // 200
+  res.statusText // OK
+  res.headers // response头
+  res.config // 配置
+})
+```
+
 拦截器：
 
 ``` js

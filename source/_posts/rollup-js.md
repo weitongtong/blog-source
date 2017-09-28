@@ -90,7 +90,7 @@ Rollup 对代码模块完全使用新的标准化格式，这些标准都包含�
       rollup --config rollup.config.dev.js
       rollup --config rollup.config.prod.js
     ```
-  4. 使用插件
+  4. 使用插件 [Plugins](https://github.com/rollup/rollup/wiki/Plugins)
     通常我们需要导入从npm下载的模块(importing modules installed with npm) 比如：通过label编译模块，使用json等。For that, we use plugins, which change the behaviour of Rollup at key points in the bundling process. A list of available plugins is maintained on the Rollup wiki.
 
     以 **rollup-plugin-json** 为例 它能够使rollup导入json文件里的数据
