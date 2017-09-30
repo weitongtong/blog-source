@@ -3,7 +3,11 @@ title: Element Vs Node
 date: 2017-09-18 09:40:33
 tags:
 ---
-直接看个dmeo:
+Node是一个接口，许多DOM类型从这个接口继承，并允许类似地处理（或测试）这些各种类型。
+
+以下接口都从Node继承其方法和属性:
+Document, Element, CharacterData (which Text, Comment, and CDATASection inherit), ProcessingInstruction, DocumentFragment, DocumentType, Notation, Entity, EntityReference
+
 ```html
 <html>
   <body>
@@ -16,9 +20,26 @@ tags:
   </body>
 </html>
 ```
+``` js
+document.body // Element
+document.getElementById('id') // Element
+document.body.childNodes // 返回所有 node 子节点
+document.body.children // 只返回 Element 子节点
+
+document.body.firstChild // Node
+document.body.firstElementChild // Element
+```
 ![image](http://oifogbmox.bkt.clouddn.com/170918_1.png)
 
-> Node是一个接口，许多DOM类型从这个接口继承， 如： Document, Element, CharacterData(Text, Comment, ..)...
+
+节点类型 | NodeType
+---|---
+元素节点 ELEMENT_NODE | 1
+属性节点 ATTRIBUTE_NODE | 2
+文本节点 TEXT_NODE | 3
+注释节点 COMMENT_NODE | 8
+文档 DOCUMENT_NODE | 9
+
 
 Node 常用属性:
   - Node.firstChild
