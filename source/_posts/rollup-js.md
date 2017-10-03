@@ -13,6 +13,8 @@ tags:
 - 性能优化
 - ...
 
+<!-- more -->
+
 ## 二、为什么要用Rollup打包工具
 
 先做个简单的测试，我们准备了一个 module.js 文件和 entry.js 文件，分别用 Rollup 和 Webpack 打包。

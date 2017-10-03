@@ -4,9 +4,6 @@ date: 2017-09-18 15:41:30
 tags:
 ---
 
-生命周期：
-<img style="margin: 0 auto;" src="http://oifogbmox.bkt.clouddn.com/170918_2.png">
-
 1. vue实例
   ``` javascript
   var vm = new Vue({
@@ -47,3 +44,8 @@ tags:
   bVue instanceof Vue // true
   bComponent instanceof Vue // false
   ```
+
+<!-- more -->
+
+生命周期：
+<img style="margin: 0 auto;" src="http://oifogbmox.bkt.clouddn.com/170918_2.png">

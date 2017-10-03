@@ -15,17 +15,19 @@ simple demo:
 $ npm i vue vue-server-renderer koa -S
 ```
 
+<!-- more -->
+
 server.js
 ```js
 // server.js
 
 const Vue = require('vue')
 const Koa = require('koa')
-const renderer = require('vue-server-renderer')
+const { createRenderer } = require('vue-server-renderer')
 const app = new Koa()
 const createApp = require('./app')
 
-const indexRenderer = renderer.createRenderer({
+const indexRenderer = createRenderer({
   template: require('fs').readFileSync('./index.template.html', 'utf-8')
 })
 
@@ -84,9 +86,15 @@ index.template.html
 </head>
 <body>
   <div>我是 renderer 的内容</div>
-  <!-- 以下为template插入的标识 （注意 前后没空格） -->
+  <!-- 以下为template插入的注释标识 （注意 前后没空格） -->
   <!--vue-ssr-outlet-->
 </body>
 </html>
 ```
 ![images](http://oifogbmox.bkt.clouddn.com/170930-1.png)
+
+
+![images](http://oifogbmox.bkt.clouddn.com/171002-3ssr-webpack.png)
+
+未完待续。。。
+

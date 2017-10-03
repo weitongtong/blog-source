@@ -5,6 +5,8 @@ tags:
 ---
 [github-winston](https://github.com/winstonjs/winston)
 
+<!-- more -->
+
 文档其实感觉没看太懂，先不管了，反正就这么用：
 ``` js
 const winston = require('winston')

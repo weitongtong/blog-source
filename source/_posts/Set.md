@@ -18,6 +18,8 @@ for(let i of s) {
 ```
 > Set中的重复判断 类似于`===`，但`NaN`除外
 
+<!-- more -->
+
 属性：
 * `Set.prototype.constructor`: 构造函数
 * `Set.prototype.size`: 返回`Set`实例的成员总数
