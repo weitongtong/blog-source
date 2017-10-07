@@ -56,5 +56,20 @@ function isEmptyObj(obj) {
 </div>
 
 <div class="boxbox">
+Array.prototype.sort(compareFunction)
+
+1. 如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前。
+2. 如果 compareFunction(a, b) 等于 0 ， a 和 b 的相对位置不变。
+3. 如果 compareFunction(a, b) 大于 0 ， b 会被排列到 a 之前。
+
+```js
+const arr = [11, 41, -9046, 2047, 1118, 8477, 8446, 279, 4925, 7380, -1719, 3855]
+arr.sort((a, b) => {
+  return a - b // 切记 不要 直接返回一个Bolean类型的值 如： a < b 
+})
+```
+</div>
+
+<div class="boxbox">
   [学习资料](http://caibaojian.com/book/)
 </div>
