@@ -56,18 +56,33 @@ const serialize = function(name, val, opt = {}) {
   if (opt.domain) pairs.push('Domain=' + opt.domain)
   if (opt.path) pairs.push('Path=' + opt.path)
   if (opt.expires) pairs.push('Expires=' + opt.expires.toUTCString())
+  // toUTCString格式： "Sat, 07 Oct 2017 14:22:16 GMT"
+
   if (opt.httpOnly) pairs.push('HttpOnly')
   if (opt.secure) pairs.push('Secure')
 
   return pairs.join('; ')
 }
 
-// 设置 Set-Cookie
-res.setHeader('Set-Cookie', serialize('isVisit', '1'))
+var handle = function(req, res) {
+  if (!req.cookies.isVisit) {
+    // 设置 Set-Cookie
+    res.setHeader('Set-Cookie', serialize('isVisit', '1'))
+    res.writeHead(200)
+    res.end('第一次访问')
+  } else {
+    res.writeHead(200)
+    res.end('再次访问')
+  }
+}
+```
 
-// 也可以是一个数组
+客户端收到这个带 Set-Cookie 的响应后，在之后的请求时会在 Cookie 字段中带上这个值。
+
+值得注意的是， Set-Cookie 在报头中是可能存在多个字段的。为此 res.setHeader 的第二个参数可以是一个数组，如下：
+```js
 res.setHeader('Set-Cookie', [serialize('foo', 'bar'), serialize('baz', 'val')])
-//结果：
+// 这会在报文头部中形成两条 Set-Cookie 字段：
 // Set-Cookie: foo=bar; Path=/; Expires=Sun, 23-apr-23 09:01:35 GMT; Domain=.domain.com;
 // Set-Cookie: baz=val; Path=/; Expires=Sun, 23-apr-23 09:01:35 GMT; Domain=.domain.com;
 ```
