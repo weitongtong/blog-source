@@ -34,3 +34,5 @@ const buf = new ArrayBuffer(32) // 生成一段32字节的内存区域，每个�
 const dataView = new DataView(buf) // 创建视图
 dataView.getUint8(0) // 以不带符号的8位整数格式，读取第一个元素，结果为0
 ```
+
+<div class="to-be-continued"></div>
