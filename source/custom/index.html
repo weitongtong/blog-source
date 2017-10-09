@@ -18,28 +18,52 @@ layout: false
 <script>
   var d = 0, wait = false
   var width = document.body.offsetWidth, height = document.body.offsetHeight
-  function nextImg(type) {
-    if (wait) {
-      return
-    }
-    wait = true
-    document.querySelector('.btn-next').style.cursor = 'wait'
-    var img = new Image()
-    if (type === 'rand') {
-      img.src = 'https://bing.ioliu.cn/v1/rand'
-    } else {
+  var imgController = {
+    timeout: null,
+    init: function() {
+      this.nextImg()
+    },
+    nextImg: function() {
+      if (wait) {
+        return
+      }
+      wait = true
+      document.querySelector('.btn-next').style.cursor = 'wait'
+      var img = new Image()
+      // x 参数只是为了让 url 发生变化
       img.src = `https://bing.ioliu.cn/v1/rand?w=${width}&h=${height}&x=${d++}`
-    }
-    img.onload = function() {
-      document.querySelector('.container').style.background = `url(${img.src}) center center/cover no-repeat`
-      document.querySelector('.btn-next').style.cursor = `pointer`
-      wait = false
-    }
-    img.onerror = function() {
-      alert('背景图片挂了')
-      document.querySelector('.btn-next').style.cursor = `pointer`
-      wait = false
+      img.onload = function() {
+        document.querySelector('.container').style.background = `url(${img.src}) center center/cover no-repeat`
+        document.querySelector('.btn-next').style.cursor = `pointer`
+        wait = false
+      }
+      img.onerror = function() {
+        alert('背景图片挂了')
+        document.querySelector('.btn-next').style.cursor = `pointer`
+        wait = false
+      }
+    },
+    loop: function(time) {
+      if (time < 5000) {
+        console.log('时间间隔需大于5s')
+        return
+      }
+      this.stop()
+      this.timeout = setInterval(this.nextImg, time || 30000)
+    },
+    stop: function() {
+      if (this.timeout) {
+        window.clearInterval(this.timeout)
+      }
     }
   }
-  nextImg('rand')
+  imgController.init()
+  window.nextImg = imgController.nextImg
+  window.loop = imgController.loop
+  window.stop = imgController.stop
+
+  console.log('--------------------------')
+  console.log('loop() 图片30s自动更新')
+  console.log('stop() 图片停止自动更新')
+  console.log('--------------------------')
 </script>
