@@ -17,20 +17,21 @@ layout: false
 </div>
 <script>
   var d = 0, wait = false
+  var width = document.body.offsetWidth, height = document.body.offsetHeight
   function nextImg(type) {
     if (wait) {
       return
     }
     wait = true
-    document.querySelector('.btn-next').style.cursor = `wait`
+    document.querySelector('.btn-next').style.cursor = 'wait'
     var img = new Image()
     if (type === 'rand') {
       img.src = 'https://bing.ioliu.cn/v1/rand'
     } else {
-      img.src = `https://bing.ioliu.cn/v1/rand?x=${d++}`
+      img.src = `https://bing.ioliu.cn/v1/rand?w=${width}&h=${height}&x=${d++}`
     }
     img.onload = function() {
-      document.querySelector('.container').style.backgroundImage = `url(${img.src})`
+      document.querySelector('.container').style.background = `url(${img.src}) center center/cover no-repeat`
       document.querySelector('.btn-next').style.cursor = `pointer`
       wait = false
     }
