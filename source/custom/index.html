@@ -25,9 +25,9 @@ layout: false
     document.querySelector('.btn-next').style.cursor = `wait`
     var img = new Image()
     if (type === 'rand') {
-      img.src = 'http://bing.ioliu.cn/v1/rand'
+      img.src = 'https://bing.ioliu.cn/v1/rand'
     } else {
-      img.src = `http://bing.ioliu.cn/v1?d=${d++}`
+      img.src = `https://bing.ioliu.cn/v1/rand?x=${d++}`
     }
     img.onload = function() {
       document.querySelector('.container').style.backgroundImage = `url(${img.src})`
