@@ -4,7 +4,7 @@ date: 2017-09-18 15:41:30
 tags:
 ---
 
-1. vue实例
+#### 1. vue实例
   ``` javascript
   var vm = new Vue({
     el: '#app', // 挂载点 实例挂载之后，元素可以用 vm.$el 访问
@@ -14,7 +14,7 @@ tags:
     },
   })
   ```
-2. vue.extend, vue.component
+#### 2. vue.extend, vue.component
   ``` javascript
   var myComponentOption = {
     template: '<div>{{message}}</div>',
@@ -44,6 +44,24 @@ tags:
   bVue instanceof Vue // true
   bComponent instanceof Vue // false
   ```
+
+#### 3. 运行时+编译器 VS 只包含运行时
+如果你需要在客户端编译模板（比如传入一个字符串给`template`选项，或挂载到一个元素上并以其内部的`HTML`作为模板），你将需要加上编译器，即完整版的构建。
+```js
+// 需要编译器
+new Vue({
+  template: '<div>{{hi}}</div>'
+})
+
+// 不需要编译器
+new Vue({
+  render(h) {
+    return h('div', this.hi)
+  }
+})
+```
+当使用 `vue-loader`或`verify`的时候，`*.vue`文件内部的模板会在构建时预编译成js。你在最终打包好的包里是不需要编译器的，因为只是运行时构建即可。
+
 
 <!-- more -->
 

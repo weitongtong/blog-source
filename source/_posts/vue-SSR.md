@@ -96,5 +96,5 @@ index.template.html
 
 ![images](http://oifogbmox.bkt.clouddn.com/171002-3ssr-webpack.png)
 
-未完待续。。。
+<div class="to-be-continue"></div>
 

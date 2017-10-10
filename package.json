@@ -5,7 +5,10 @@
   "hexo": {
     "version": "3.3.9"
   },
-  "scripts": {},
+  "scripts": {
+    "bg": "hexo g",
+    "gg": "hexo g && gulp" 
+  },
   "dependencies": {
     "hexo": "^3.2.0",
     "hexo-admin": "^2.2.1",
