@@ -29,5 +29,5 @@ gulp.task('minify-js', function() {
 });
 // 执行 gulp 命令时执行的任务
 gulp.task('default', [
-    'minify-html', 'minify-css', 'minify-js'
+    'minify-html', 'minify-css'
 ]);

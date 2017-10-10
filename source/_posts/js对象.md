@@ -19,6 +19,8 @@ new 方式创建对象过程：
 (3) 执行构造函数中的代码（为这个新对象添加属性）。
 (4) 返回新对象。
 
+<!-- more -->
+
 ```js
 // 实例的 constructor(构造函数) 属性指向 Person
 p1.constructor === Person // true
