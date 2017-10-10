@@ -75,7 +75,9 @@ Object.keys() 获取实例上所有可枚举的属性，只是实例哦，不包
 Object.getOwnPropertyNames() 获取实例上所有属性（包括可枚举和不可枚举的），只是实例，不包括原型上的属性。
 
 如下，我们将 Person.prototype 设置为等于一个以对象字面量形式创建的新对象，这样做唯一的影响是 constrcutor 属性不再指向 Person 了。
+
 > 每创建一个函数，就会同时创建它的 prototype 对象，这个对象也会自动获得 constructor 属性。而我们在这里直接重写了默认的 prototype 对象，因此 constructor 属性也就变成了新对象的 constructor 属性（指向 Object 的构造函数），不再指向 Person 函数了。
+
 ```js
 function Person() {
 }
