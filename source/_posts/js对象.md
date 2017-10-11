@@ -116,3 +116,5 @@ p.sayName() // error
 ```
 简单说 实例上的 [[Prototype]] 属性还是指向 最初创建实例时 的原型对象。
 
+
+<div class="to-be-continued"></div>
