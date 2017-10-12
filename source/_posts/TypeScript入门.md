@@ -12,11 +12,12 @@ let num: number
 num = 'linkFly' // 会报错
 
 const fetch = function(url: string): Promise {
-
 }
 // fetch() 函数接收一个 string 类型的参数 url，返回一个 Promise。
-
 ```
+
+<!-- more -->
+
 ```ts
 export const fetch = function (url: string | object, params?: any, user?: User): Promise<object | Error> {
   // dosomething
@@ -224,8 +225,10 @@ class User {
 let user = fetch<User>('http://xxx/api/user')
 ```
 
-
-
+#### 快速使用
+```bash
+npm i -g typescript
+```
 
 
 
