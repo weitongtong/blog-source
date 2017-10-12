@@ -84,7 +84,7 @@ class Component {
 
 小tips：
 * 使用 visual studio code 编辑器会体验到 TypeScript 强大的类型推导，毕竟两个都是微软亲儿子。
-* 一些 JavaScript 编写的大型的第三方库，都提供了 TypeScript 的类型声明文件（`*.d.ts` 文件）, 一般都放在包目录的 types 文件夹中。或者在 `@didi/*` 仓库名下可以找到。
+* 一些 JavaScript 编写的大型的第三方库，都提供了 TypeScript 的类型声明文件（`*.d.ts` 文件）, 一般都放在包目录的 types 文件夹中。或者在 `@didi/*` 仓库名下可以找到。
 * babel 是将高级版本的 JavaScript 编译为目标版本的 JavaScript，TypeScript 是将 TypeScript 编译为目标版本的 JavaScript。它们的编译是重叠的，也就是说 TypeScript 可以不再依赖 babel 编译。
 
 
