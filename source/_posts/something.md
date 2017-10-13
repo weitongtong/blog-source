@@ -153,6 +153,14 @@ node 调试命令
 </div>
 
 <div class="boxbox">
+```js
+// `npm run build --report`
+// bundleAnalyzerReport: process.env.npm_config_report
+```
+</div>
+
+
+<div class="boxbox">
   [可能有用的学习资料](http://caibaojian.com/book/)
 </div>
 
