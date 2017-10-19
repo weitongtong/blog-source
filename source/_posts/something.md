@@ -159,6 +159,10 @@ node 调试命令
 ```
 </div>
 
+<div class="boxbox">
+  [监听数组](https://zhuanlan.zhihu.com/p/22983372)
+</div>
+
 
 <div class="boxbox">
   [可能有用的学习资料](http://caibaojian.com/book/)
