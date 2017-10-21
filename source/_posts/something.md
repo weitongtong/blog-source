@@ -163,6 +163,154 @@ node 调试命令
   [监听数组](https://zhuanlan.zhihu.com/p/22983372)
 </div>
 
+<div class="boxbox">
+```
+module: {
+  rules: [
+    {
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          css: [
+            'vue-style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: false,
+                sourceMap: false,
+              }
+            }
+          ],
+          stylus: [
+            'vue-style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                minimize: false,
+                sourceMap: false
+              }
+            },
+            {
+              loader: 'stylus-loader',
+              options: {
+                sourceMap: false
+              }
+            }
+          ]
+        },
+        transformToRequire: {
+          video: 'src',
+          source: 'src',
+          img: 'src',
+          image: 'xlink:href',
+        }
+      }, 
+    },
+    {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      include: [`${path.join(__dirname, '../src')}`]
+    },
+    {
+      test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: 'static/img/[name].[hash:7].[ext]',
+      }
+    },
+    {
+      test: /\.css$/,
+      use: [
+        'vue-style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            minimize: false,
+            sourceMap: false
+          }
+        }
+      ]
+    },
+    {
+      test: /\.stylus$/,
+      use: [
+        'vue-style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            minimize: false,
+            sourceMap: false
+          }
+        },
+        {
+          loader: 'stylus-loader',
+          options: {
+            sourceMap: false
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+</div>
+
+<div class="boxbox">
+```js
+"dependencies": {
+  "vue": "^2.5.2",
+  "vue-router": "^3.0.1"
+},
+"devDependencies": {
+  "autoprefixer": "^7.1.2",
+  "babel-core": "^6.22.1",
+  "babel-loader": "^7.1.1",
+  "babel-plugin-transform-runtime": "^6.22.0",
+  "babel-preset-env": "^1.3.2",
+  "babel-preset-stage-2": "^6.22.0",
+  "babel-register": "^6.22.0",
+  "chalk": "^2.0.1",
+  "connect-history-api-fallback": "^1.3.0",
+  "copy-webpack-plugin": "^4.0.1",
+  "css-loader": "^0.28.0",
+  "eventsource-polyfill": "^0.9.6",
+  "express": "^4.14.1",
+  "extract-text-webpack-plugin": "^3.0.0",
+  "file-loader": "^1.1.4",
+  "friendly-errors-webpack-plugin": "^1.6.1",
+  "html-webpack-plugin": "^2.30.1",
+  "http-proxy-middleware": "^0.17.3",
+  "opn": "^5.1.0",
+  "optimize-css-assets-webpack-plugin": "^3.2.0",
+  "ora": "^1.2.0",
+  "portfinder": "^1.0.13",
+  "rimraf": "^2.6.0",
+  "semver": "^5.3.0",
+  "shelljs": "^0.7.6",
+  "url-loader": "^0.5.8",
+  "vue-loader": "^13.3.0",
+  "vue-style-loader": "^3.0.1",
+  "vue-template-compiler": "^2.5.2",
+  "webpack": "^3.6.0",
+  "webpack-bundle-analyzer": "^2.9.0",
+  "webpack-dev-middleware": "^1.12.0",
+  "webpack-hot-middleware": "^2.18.2",
+  "webpack-merge": "^4.1.0",
+  "winston": "^2.4.0"
+},
+"engines": {
+  "node": ">= 4.0.0",
+  "npm": ">= 3.0.0"
+},
+"browserslist": [
+  "> 1%",
+  "last 2 versions",
+  "not ie <= 8"
+]
+```
+</div>
 
 <div class="boxbox">
   [可能有用的学习资料](http://caibaojian.com/book/)
