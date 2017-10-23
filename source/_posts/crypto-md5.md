@@ -12,6 +12,8 @@ MD5(Message-Digest Algorithm) 是广泛使用的散列函数（又称哈希算�
 * 高度离散：输入的微小变化，可导致输出结果的巨大差异。
 * 弱碰撞性：不同输入的散列值可能相同。
 
+<!-- more -->
+
 node:
 ```js
 const crypto = require('crypto')
