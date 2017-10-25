@@ -313,6 +313,34 @@ module: {
 </div>
 
 <div class="boxbox">
+  绝对定位元素的水平垂直居中：
+  way1: 设置50%
+  ```css
+  .box{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+  ```
+  way2: 利用绝对定位元素的自动伸缩特性
+  ```css
+  .box{
+    width: 100px;
+    height: 100px;
+    left: 0;
+    right :0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  ```
+</div>
+
+<div class="boxbox">
   [可能有用的学习资料](http://caibaojian.com/book/)
 </div>
 
