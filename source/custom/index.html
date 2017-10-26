@@ -25,7 +25,7 @@ layout: false
   var imgController = {
     timeout: null,
     init: function() {
-      this.nextImg()
+      // this.nextImg()
     },
     nextImg: function() {
       if (wait) {
@@ -38,12 +38,12 @@ layout: false
       img.src = `https://bing.ioliu.cn/v1/rand?w=${width}&h=${height}&x=${d++}`
       img.onload = function() {
         document.querySelector('.container').style.background = `url(${img.src}) center center/cover no-repeat`
-        document.querySelector('.btn-next').style.cursor = `pointer`
+        document.querySelector('.btn-next').style.cursor = 'pointer'
         wait = false
       }
       img.onerror = function() {
         alert('背景图片挂了')
-        document.querySelector('.btn-next').style.cursor = `pointer`
+        document.querySelector('.btn-next').style.cursor = 'pointer'
         wait = false
       }
     },
