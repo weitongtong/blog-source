@@ -345,7 +345,6 @@ module: {
 </div>
 
 
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.boxbox').forEach((dom) => {
