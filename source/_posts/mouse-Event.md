@@ -57,7 +57,7 @@ e.cancelbale: false
 e.bubbles: false
 e.cancelable: false
 ```
-.wrap overflow: scroll width: 100px height: 100px 
+.wrap overflow: scroll width: 100px height: 100px
    .box width: 1000px height: 1000px
 (.wrap).addEventListener('scroll', fn)
 ```

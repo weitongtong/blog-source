@@ -1,5 +1,5 @@
 ---
-title: 关于vue
+title: vue
 date: 2017-09-18 15:41:30
 tags:
 ---
@@ -63,6 +63,19 @@ new Vue({
 当使用 `vue-loader`或`verify`的时候，`*.vue`文件内部的模板会在构建时预编译成js。你在最终打包好的包里是不需要编译器的，因为只是运行时构建即可。
 
 
+#### 知识点
+```HTML
+<child :message="message" name="child" @click="clickHandle"></child>
+```
+* v-bind="$attrs" 继承属性
+* v-on="$listeners" 继承事件
+
+
+* [Element] v-loading visible使用了$nextTick
+
+* [Element] tips:
+  * console.warn('[Element Warn][Form]model is required for resetFields to work.')
+  * throw new Error('must call validateField with valid prop string!');
 <!-- more -->
 
 生命周期：

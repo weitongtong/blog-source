@@ -53,8 +53,8 @@ Array.isArray
 单例
 
 vue不能检测数组
-1. length 属性不能 Object.defineProperty
-2. vue下索引也不允许更新，因为length = 5的数组，未必索引就有4，这个索引(属性)
+1. length 属性不能 Object.defineProperty  （length属性是不可配置的）
+2. vue下索引也不允许更新，因为length = 5的数组，未必索引就有4这个索引(属性)
 
 defineProperty
   configurable: 可配置
